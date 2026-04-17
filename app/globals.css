@@ -1,17 +1,227 @@
+:root{
+  --bg:#f6f1e8;
+  --surface:#fffdf9;
+  --surface-soft:#f2ece2;
+  --ink:#171411;
+  --muted:#6f655b;
+  --line:rgba(79,61,44,.14);
+  --gold:#b08a4e;
+  --gold-soft:#d7be8b;
+  --deep:#1d1814;
+  --deep-2:#2a221d;
+  --radius:24px;
+  --shadow:0 24px 60px rgba(25,18,11,.09);
+}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Inter,system-ui,Arial;background:#f8fafc;color:#0f172a}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:radial-gradient(circle at top,#fbf7ef 0%,#f3ede3 45%,#f6f1e8 100%);
+  color:var(--ink);
+}
 a{text-decoration:none;color:inherit}
-.container{max-width:1100px;margin:0 auto;padding:20px}
+button,input,select,textarea{font:inherit}
+.container{max-width:1180px;margin:0 auto;padding:0 22px}
+.site-shell{padding-bottom:78px}
 
-.mobile-call-bar{position:fixed;bottom:0;left:0;right:0;background:#0f172a;color:#fff;text-align:center;padding:14px;font-weight:700}
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(250,245,237,.76);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(92,73,54,.08);
+}
+.topbar-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand-mark{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:1.3rem;font-weight:700;letter-spacing:.02em;
+}
+.nav-links{display:none;gap:18px;color:var(--muted);font-size:.95rem}
+.nav-links a{position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:100%;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.nav-links a:hover::after{transform:scaleX(1)}
 
-.doctor-grid,.appointment-grid{display:grid;gap:20px}
+.hero{padding:42px 0 44px}
+.luxury-hero{position:relative;overflow:hidden}
+.luxury-hero::before{
+  content:"";position:absolute;inset:32px 24px auto auto;width:340px;height:340px;border-radius:50%;
+  background:radial-gradient(circle,rgba(215,190,139,.34) 0%,rgba(215,190,139,0) 68%);
+  pointer-events:none;
+}
+.hero-grid,.luxury-grid{display:grid;gap:28px;align-items:center}
+.hero-copy-wrap{
+  background:linear-gradient(180deg,rgba(255,253,249,.86),rgba(255,251,245,.72));
+  border:1px solid rgba(118,96,72,.12);
+  box-shadow:var(--shadow);
+  border-radius:34px;
+  padding:28px;
+}
+.eyebrow,.section-kicker{
+  display:inline-flex;align-items:center;gap:10px;
+  color:var(--gold);text-transform:uppercase;letter-spacing:.18em;
+  font-size:.72rem;font-weight:700;
+}
+.eyebrow::before,.section-kicker::before{content:"";width:32px;height:1px;background:currentColor;opacity:.8}
+.hero-title,.section-heading h2,.doctor-copy h2,.appointment-copy h2,.statement-grid h2,.premium-footer h2{
+  font-family:Georgia,"Times New Roman",serif;
+  letter-spacing:-.03em;line-height:.98;
+}
+.luxury-title{font-size:3rem;margin:16px 0 18px;max-width:10ch}
+.hero-copy,.section-heading p,.doctor-copy p,.appointment-copy p,.statement-grid p,.premium-footer p,.service-card p,.testimonial-card p{
+  color:var(--muted);line-height:1.8;font-size:1rem;
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:52px;padding:0 20px;border-radius:999px;font-weight:700;transition:transform .2s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:linear-gradient(135deg,var(--deep),var(--deep-2));color:#fff;box-shadow:0 16px 30px rgba(29,24,20,.16)}
+.btn-secondary{border:1px solid rgba(124,99,72,.2);background:rgba(255,255,255,.68);color:var(--ink)}
+.hero-stats,.doctor-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.stat-pill{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:38px;padding:0 14px;border-radius:999px;
+  background:rgba(255,252,247,.84);border:1px solid rgba(176,138,78,.22);
+  color:#5f4a2d;font-size:.84rem;font-weight:700;
+}
+.showcase-panel{display:grid;gap:14px}
+.showcase-card{
+  position:relative;overflow:hidden;border-radius:30px;padding:28px;
+  border:1px solid rgba(193,172,132,.22);box-shadow:var(--shadow);
+}
+.showcase-main{
+  min-height:320px;display:flex;flex-direction:column;justify-content:flex-end;
+  background:
+    linear-gradient(180deg,rgba(31,24,18,.16),rgba(31,24,18,.72)),
+    radial-gradient(circle at 20% 20%,rgba(255,222,169,.45),transparent 35%),
+    linear-gradient(135deg,#8b6b43 0%,#463426 45%,#1b1714 100%);
+  color:#fff;
+}
+.showcase-main h2{font-family:Georgia,"Times New Roman",serif;font-size:2.4rem;line-height:1;margin:8px 0 10px}
+.showcase-main p{color:rgba(255,245,230,.82);max-width:20rem}
+.showcase-label{color:rgba(255,224,170,.88);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+.showcase-accent{
+  background:linear-gradient(135deg,#fffaf1,#efe4d1);
+  color:var(--ink);display:flex;flex-direction:column;gap:8px;
+}
+.showcase-accent span{color:var(--muted)}
+.showcase-accent strong{font-family:Georgia,"Times New Roman",serif;font-size:1.35rem}
 
-.appointment-card input,.appointment-card select,.appointment-card textarea{width:100%;padding:10px;margin-top:6px;border:1px solid #ccc;border-radius:8px}
+.section{padding:72px 0}
+.luxury-section{position:relative}
+.centered-heading{text-align:center;max-width:780px;margin:0 auto}
+.centered-heading h2{font-size:2.5rem;margin:18px 0 14px}
+.section-heading.narrow{max-width:640px}
+.gold-kicker{color:var(--gold-soft)}
+
+.services-grid,.luxury-services-grid,.testimonials-grid,.luxury-testimonials-grid{display:grid;gap:18px;margin-top:30px}
+.luxury-services-grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.luxury-card{
+  background:linear-gradient(180deg,rgba(255,253,249,.96),rgba(247,241,232,.92));
+  border:1px solid var(--line);border-radius:26px;padding:26px;box-shadow:var(--shadow);
+}
+.service-number{font-size:1.6rem;color:var(--gold);margin-bottom:14px}
+.service-card h3,.testimonial-card footer,.premium-footer h3{
+  font-family:Georgia,"Times New Roman",serif;
+}
+.service-card h3{font-size:1.28rem;margin-bottom:10px}
+
+.statement-section{
+  background:linear-gradient(135deg,#201912,#31271e 55%,#1d1712 100%);
+  color:#fff;
+}
+.statement-grid{display:grid;gap:18px;align-items:center}
+.statement-grid h2{font-size:2.35rem;margin:16px 0 12px;color:#fff}
+.statement-grid p{color:rgba(241,229,213,.78)}
+.statement-card{
+  border-radius:30px;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04));
+  border:1px solid rgba(215,190,139,.18);color:#f5e6cc;
+  font-family:Georgia,"Times New Roman",serif;font-size:1.35rem;line-height:1.45;
+}
+
+.luxury-doctor-grid,.luxury-appointment-grid,.footer-grid{display:grid;gap:24px;align-items:center}
+.portrait-shell{display:flex;justify-content:center}
+.portrait-frame{
+  width:min(100%,430px);aspect-ratio:4/4.7;border-radius:34px;padding:16px;
+  background:linear-gradient(135deg,#ddc79b,#8e6c43 46%,#2e241c 100%);
+  box-shadow:var(--shadow);
+}
+.portrait-abstract{
+  position:relative;height:100%;border-radius:26px;overflow:hidden;
+  background:
+    linear-gradient(180deg,rgba(255,247,234,.88),rgba(255,248,240,.16)),
+    linear-gradient(135deg,#2a221d 0%,#645140 35%,#ead9bc 100%);
+}
+.portrait-orb{
+  position:absolute;inset:18% auto auto 16%;width:180px;height:180px;border-radius:50%;
+  background:radial-gradient(circle,#f8e1bb 0%,#b98a4d 42%,rgba(185,138,77,0) 72%);opacity:.84;
+}
+.portrait-line,.portrait-line-two{
+  position:absolute;height:2px;background:rgba(255,240,220,.65);width:62%;left:14%;bottom:26%;transform:rotate(-22deg)
+}
+.portrait-line-two{width:46%;bottom:19%;left:28%;transform:rotate(12deg)}
+.luxury-doctor-copy h2{font-size:2.45rem;margin:16px 0 14px;max-width:12ch}
+.luxury-doctor-copy p + p{margin-top:14px}
+
+.luxury-appointment-grid{align-items:start}
+.luxury-appointment-copy{
+  background:linear-gradient(180deg,#fffaf2,#f6ecdd);
+  border-radius:30px;padding:28px;border:1px solid rgba(167,136,92,.16);box-shadow:var(--shadow)
+}
+.luxury-appointment-copy h2{font-size:2.3rem;margin:16px 0 12px;max-width:12ch}
+.luxury-form-card{
+  background:rgba(255,253,248,.88);backdrop-filter:blur(8px);
+  border-radius:30px;padding:26px;border:1px solid rgba(131,103,74,.12);box-shadow:var(--shadow);
+}
+.appointment-card{display:grid;gap:16px}
+.appointment-card label{display:grid;gap:8px;color:#5f5143;font-size:.92rem;font-weight:600}
+.appointment-card input,.appointment-card select,.appointment-card textarea{
+  width:100%;background:#fff;border:1px solid rgba(139,109,76,.18);border-radius:16px;padding:14px 16px;color:var(--ink);outline:none;
+}
+.appointment-card input:focus,.appointment-card select:focus,.appointment-card textarea:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(176,138,78,.09)}
 .full-width{width:100%}
 
-@media(min-width:768px){
-.mobile-call-bar{display:none}
-.doctor-grid{grid-template-columns:1fr 1fr}
-.appointment-grid{grid-template-columns:1fr 1fr}
+.luxury-testimonials-grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.luxury-testimonial-card{
+  background:linear-gradient(180deg,#fffdf9,#f5ede1);border:1px solid rgba(126,101,72,.14);border-radius:26px;padding:24px;box-shadow:var(--shadow)
+}
+.testimonial-card p{font-family:Georgia,"Times New Roman",serif;font-size:1.14rem;line-height:1.65;color:#4d4034}
+.testimonial-card footer{margin-top:16px;color:var(--gold);font-size:1rem}
+
+.luxury-footer{
+  background:linear-gradient(180deg,#1d1814,#15110d);
+  color:#fff;border-top:none;padding:70px 0 52px;
+}
+.luxury-footer h2{font-size:2rem;margin-bottom:12px}
+.luxury-footer h3{margin-bottom:10px;color:#f0d7a7;font-size:1.08rem}
+.luxury-footer p{color:rgba(244,231,213,.78)}
+.footer-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.hours-list{list-style:none;margin-top:10px;display:grid;gap:8px}
+.hours-list li{display:flex;justify-content:space-between;gap:16px;color:rgba(244,231,213,.78)}
+.hours-list strong{color:#fff;font-weight:600}
+
+.mobile-call-bar{
+  position:fixed;left:16px;right:16px;bottom:14px;z-index:60;
+  display:flex;justify-content:center;align-items:center;
+  min-height:56px;border-radius:999px;
+  background:linear-gradient(135deg,var(--deep),#34291f);color:#fff;
+  box-shadow:0 20px 35px rgba(20,15,10,.24);font-weight:800;letter-spacing:.01em;
+}
+
+@media (min-width:720px){
+  .nav-links{display:flex}
+}
+@media (min-width:900px){
+  .site-shell{padding-bottom:0}
+  .hero{padding:58px 0 62px}
+  .hero-grid,.luxury-grid,.statement-grid,.luxury-doctor-grid,.luxury-appointment-grid{grid-template-columns:1.05fr .95fr}
+  .luxury-title{font-size:4.55rem}
+  .centered-heading h2{font-size:3.2rem}
+  .luxury-doctor-copy h2,.luxury-appointment-copy h2{font-size:3rem}
+  .mobile-call-bar{display:none}
+}
+@media (max-width:899px){
+  .nav-links{display:none}
+  .luxury-title{font-size:2.7rem}
+  .showcase-main{min-height:260px}
 }
