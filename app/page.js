@@ -14,6 +14,7 @@ const copy = {
       "Solvision Dentist provides modern general dentistry in North Port, Florida with a friendly, detail-focused approach designed around comfort, clarity, and long-term oral health.",
     primaryCta: "Call now",
     secondaryCta: "Explore services",
+    stickyCall: "Call now",
     stat1: "General dentistry",
     stat2: "All major insurance accepted",
     stat3: "Convenient North Port location",
@@ -34,6 +35,24 @@ const copy = {
     insuranceText:
       "We work with all major insurance companies and can help verify your benefits before your visit so you know what to expect.",
     insuranceCallout: "Questions about coverage? Our team can help before your appointment.",
+    doctorKicker: "Meet your doctor",
+    doctorTitle: "Care shaped by clinical training and business leadership.",
+    doctorText:
+      "Dr. Daniel Ocaña studied at Penn Dental Medicine and later completed an MBA at the University of Chicago, bringing together patient-centered dental care with thoughtful, modern practice leadership.",
+    doctorText2:
+      "That combination supports a care experience built on trust, clear communication, efficient systems, and high standards from the first call to every follow-up visit.",
+    doctorBadge1: "Penn Dental Medicine",
+    doctorBadge2: "University of Chicago MBA",
+    appointmentKicker: "Appointments",
+    appointmentTitle: "Request your visit",
+    appointmentText:
+      "Call us directly or send a quick request so our team can help you find the best appointment time.",
+    formName: "Full name",
+    formPhone: "Phone number",
+    formService: "Select service",
+    formMessage: "How can we help?",
+    formButton: "Request appointment",
+    serviceOptions: ["Dental exam", "Cleaning", "Fillings", "Cosmetic consultation", "Emergency visit"],
     testimonialsTitle: "What patients say",
     testimonials: [
       ["Very clean office and the team was genuinely kind from start to finish.", "Maria G."],
@@ -68,6 +87,7 @@ const copy = {
       "Solvision Dentist ofrece odontología general moderna en North Port, Florida, con un enfoque amable y detallista diseñado para la comodidad, la claridad y la salud oral a largo plazo.",
     primaryCta: "Llamar ahora",
     secondaryCta: "Ver servicios",
+    stickyCall: "Llamar ahora",
     stat1: "Odontología general",
     stat2: "Aceptamos seguros principales",
     stat3: "Ubicación conveniente en North Port",
@@ -88,6 +108,24 @@ const copy = {
     insuranceText:
       "Trabajamos con todas las principales compañías de seguros y podemos ayudarle a verificar sus beneficios antes de su visita para que sepa qué esperar.",
     insuranceCallout: "¿Preguntas sobre cobertura? Nuestro equipo puede ayudarle antes de su cita.",
+    doctorKicker: "Conozca a su doctor",
+    doctorTitle: "Atención guiada por formación clínica y visión de liderazgo.",
+    doctorText:
+      "El Dr. Daniel Ocaña estudió en Penn Dental Medicine y luego completó un MBA en la University of Chicago, combinando una atención dental centrada en el paciente con una dirección moderna y bien pensada de la práctica.",
+    doctorText2:
+      "Esa combinación ayuda a ofrecer una experiencia basada en confianza, comunicación clara, sistemas eficientes y altos estándares desde la primera llamada hasta cada seguimiento.",
+    doctorBadge1: "Penn Dental Medicine",
+    doctorBadge2: "MBA University of Chicago",
+    appointmentKicker: "Citas",
+    appointmentTitle: "Solicite su visita",
+    appointmentText:
+      "Llámenos directamente o envíe una solicitud rápida para que nuestro equipo le ayude a encontrar el mejor horario.",
+    formName: "Nombre completo",
+    formPhone: "Número de teléfono",
+    formService: "Seleccione servicio",
+    formMessage: "¿Cómo podemos ayudarle?",
+    formButton: "Solicitar cita",
+    serviceOptions: ["Examen dental", "Limpieza", "Empastes", "Consulta cosmética", "Visita de emergencia"],
     testimonialsTitle: "Lo que dicen los pacientes",
     testimonials: [
       ["La oficina está muy limpia y el equipo fue realmente amable de principio a fin.", "María G."],
@@ -197,6 +235,63 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section doctor-section">
+        <div className="container doctor-grid">
+          <div className="doctor-photo-card">
+            <div className="doctor-photo-glow" />
+            <div className="doctor-photo">
+              <div className="doctor-head" />
+              <div className="doctor-body" />
+            </div>
+          </div>
+          <div className="doctor-copy">
+            <span className="section-kicker">{t.doctorKicker}</span>
+            <h2>{t.doctorTitle}</h2>
+            <p>{t.doctorText}</p>
+            <p>{t.doctorText2}</p>
+            <div className="doctor-badges">
+              <span className="stat-pill">{t.doctorBadge1}</span>
+              <span className="stat-pill">{t.doctorBadge2}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section appointment-section">
+        <div className="container appointment-grid">
+          <div className="appointment-copy">
+            <span className="section-kicker">{t.appointmentKicker}</span>
+            <h2>{t.appointmentTitle}</h2>
+            <p>{t.appointmentText}</p>
+            <a href="tel:+19415550148" className="btn btn-primary">{t.primaryCta}</a>
+          </div>
+          <form className="appointment-card">
+            <label>
+              <span>{t.formName}</span>
+              <input type="text" placeholder={t.formName} />
+            </label>
+            <label>
+              <span>{t.formPhone}</span>
+              <input type="tel" placeholder="(941) 555-0148" />
+            </label>
+            <label>
+              <span>{t.formService}</span>
+              <select defaultValue="">
+                <option value="" disabled>{t.formService}</option>
+                {t.serviceOptions.map((option) => (
+                  <option key={option} value={option}>{option}</option>
+                ))}
+              </select>
+            </label>
+            <label>
+              <span>{t.formMessage}</span>
+              <textarea rows="4" placeholder={t.formMessage} />
+            </label>
+            <button type="button" className="btn btn-primary full-width">{t.formButton}</button>
+          </form>
+        </div>
+      </section>
+
       <section id="testimonials" className="section premium-section">
         <div className="container">
           <div className="section-heading narrow">
@@ -239,6 +334,8 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      <a href="tel:+19415550148" className="mobile-call-bar">{t.stickyCall}</a>
     </main>
   );
 }
