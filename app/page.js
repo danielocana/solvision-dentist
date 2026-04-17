@@ -1,35 +1,55 @@
-export default function Home() {
-  return (
-    <main style={{ padding: 20, fontFamily: "Arial" }}>
-      <h1>Solvision Dentist</h1>
-      <p>General dental care in North Port, Florida</p>
+export default function Home(){
+return(
+<main>
+<section className="hero">
+<div className="container">
+<h1 style={{fontSize:"2.5rem",marginBottom:10}}>Solvision Dentist</h1>
+<p style={{marginBottom:20}}>Modern Dental Care in North Port, Florida<br/>Atención dental moderna en North Port, Florida</p>
+<div style={{display:"flex",gap:10,flexWrap:"wrap"}}>
+<a href="#contact" className="btn btn-primary">Call Now</a>
+<a href="#services" className="btn btn-secondary">Services</a>
+</div>
+</div>
+</section>
 
-      <h2>Servicios / Services</h2>
-      <ul>
-        <li>Dental exams / Exámenes dentales</li>
-        <li>Cleanings / Limpiezas</li>
-        <li>Fillings / Empastes</li>
-        <li>Root canals / Endodoncia</li>
-        <li>Extractions / Extracciones</li>
-        <li>Implants / Implantes</li>
-        <li>Whitening / Blanqueamiento</li>
-      </ul>
+<section id="services" className="section">
+<div className="container">
+<h2>Services / Servicios</h2>
+<div className="grid grid-3" style={{marginTop:20}}>
+{["Cleanings / Limpiezas","Fillings / Empastes","Root Canals / Endodoncia","Extractions / Extracciones","Implants / Implantes","Whitening / Blanqueamiento"].map(s=>(
+<div className="card" key={s}>{s}</div>
+))}
+</div>
+</div>
+</section>
 
-      <h2>Insurance / Seguros</h2>
-      <p>We work with all major insurance companies</p>
-      <p>Trabajamos con todas las principales aseguradoras</p>
+<section className="section">
+<div className="container">
+<h2>Insurance</h2>
+<p>We work with all major insurance companies<br/>Trabajamos con todas las aseguradoras principales</p>
+</div>
+</section>
 
-      <h2>Testimonials</h2>
-      <p>"Great service!"</p>
-      <p>"Excelente atención!"</p>
+<section className="section">
+<div className="container">
+<h2>Testimonials</h2>
+<div className="grid grid-3" style={{marginTop:20}}>
+<div className="card">"Great service"</div>
+<div className="card">"Excelente atención"</div>
+<div className="card">"Very professional"</div>
+</div>
+</div>
+</section>
 
-      <h2>Contact</h2>
-      <p>North Port, Florida</p>
-      <p>(941) 555-0148</p>
+<footer id="contact" className="footer">
+<div className="container">
+<h3>Contact</h3>
+<p>(941) 555-0148</p>
+<p>North Port, Florida</p>
+<p>Mon-Fri 8am–5pm</p>
+</div>
+</footer>
 
-      <footer style={{ marginTop: 40 }}>
-        <p>Hours: Mon-Fri 8am–5pm</p>
-      </footer>
-    </main>
-  );
+</main>
+)
 }
