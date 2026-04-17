@@ -9,63 +9,56 @@ const copy = {
     navDoctor: "Doctor",
     navTestimonials: "Testimonials",
     navContact: "Contact",
-    badge: "Now welcoming new patients",
-    heroTitle: "A cleaner, calmer dental experience for the whole family.",
+    badge: "Private-feel family dental care",
+    heroTitle: "Refined dentistry with a calm, modern experience.",
     heroText:
-      "Solvision Dentist provides modern general dentistry in North Port, Florida with a friendly, detail-focused approach designed around comfort, clarity, and long-term oral health.",
+      "Solvision Dentist delivers elevated general dentistry in North Port, Florida with a focus on precision, comfort, and a beautifully organized patient experience.",
     primaryCta: "Call now",
-    secondaryCta: "Explore services",
+    secondaryCta: "Request visit",
     stickyCall: "Call now",
     stat1: "General dentistry",
-    stat2: "All major insurance accepted",
-    stat3: "Convenient North Port location",
-    servicesTitle: "Complete general dentistry",
+    stat2: "All major insurance",
+    stat3: "North Port, Florida",
+    servicesTitle: "Comprehensive care, beautifully streamlined.",
     servicesText:
-      "Preventive, restorative, and cosmetic care in one welcoming office.",
+      "Preventive, restorative, and cosmetic services delivered with clear communication and meticulous attention to detail.",
     services: [
-      ["Dental Exams", "Routine checkups focused on prevention and early treatment."],
-      ["Professional Cleanings", "Thorough hygiene visits that help keep teeth and gums healthy."],
-      ["Tooth-Colored Fillings", "Natural-looking restorations for cavities and minor damage."],
-      ["Crowns & Bridges", "Durable solutions to restore strength, comfort, and function."],
-      ["Root Canals", "Comfort-focused treatment to save infected or painful teeth."],
-      ["Extractions", "Safe removal when a tooth cannot be predictably restored."],
-      ["Dental Implants", "Modern tooth replacement for a stable, confident smile."],
-      ["Teeth Whitening", "Cosmetic brightening designed to refresh your smile."],
+      ["Dental Exams", "Routine evaluations designed to catch issues early and protect long-term oral health."],
+      ["Professional Cleanings", "Thorough hygiene care for a fresher, healthier smile."],
+      ["Tooth-Colored Fillings", "Subtle restorations that preserve a natural appearance."],
+      ["Crowns & Bridges", "Durable treatment solutions that restore comfort and function."],
+      ["Root Canals", "Comfort-focused care to relieve infection while preserving the tooth."],
+      ["Extractions", "Thoughtful surgical care when removal is the best long-term option."],
+      ["Dental Implants", "Modern tooth replacement with stability, confidence, and aesthetics in mind."],
+      ["Teeth Whitening", "Cosmetic brightening for a cleaner, more luminous smile."],
     ],
-    insuranceTitle: "Insurance made simple",
+    insuranceTitle: "Insurance handled with clarity",
     insuranceText:
-      "We work with all major insurance companies and can help verify your benefits before your visit so you know what to expect.",
-    insuranceCallout:
-      "Questions about coverage? Our team can help before your appointment.",
-    doctorKicker: "Meet your doctor",
-    doctorTitle: "Care shaped by clinical training and business leadership.",
+      "We work with all major insurance companies and help patients understand benefits before treatment so decisions feel simple, not stressful.",
+    insuranceCallout: "Elegant care. Transparent guidance. No unnecessary confusion.",
+    doctorKicker: "About the doctor",
+    doctorTitle: "Clinical excellence supported by business discipline.",
     doctorText:
-      "Dr. Daniel Ocaña studied at Penn Dental Medicine and later completed an MBA at the University of Chicago, bringing together patient-centered dental care with thoughtful, modern practice leadership.",
+      "Dr. Daniel Ocaña studied at Penn Dental Medicine and later earned an MBA at the University of Chicago, bringing together high-level clinical training with thoughtful, modern practice leadership.",
     doctorText2:
-      "That combination supports a care experience built on trust, clear communication, efficient systems, and high standards from the first call to every follow-up visit.",
+      "That combination helps shape a patient experience centered on trust, efficiency, communication, and consistent attention to detail from the first call to every follow-up visit.",
     doctorBadge1: "Penn Dental Medicine",
     doctorBadge2: "University of Chicago MBA",
     appointmentKicker: "Appointments",
-    appointmentTitle: "Request your visit",
+    appointmentTitle: "Request a more comfortable dental visit.",
     appointmentText:
-      "Call us directly or send a quick request so our team can help you find the best appointment time.",
+      "Call now for immediate scheduling or send a quick request and our team will help you find the right appointment time.",
     formName: "Full name",
     formPhone: "Phone number",
     formService: "Select service",
     formMessage: "How can we help?",
     formButton: "Request appointment",
-    serviceOptions: [
-      "Dental exam",
-      "Cleaning",
-      "Fillings",
-      "Cosmetic consultation",
-      "Emergency visit",
-    ],
-    testimonialsTitle: "What patients say",
+    serviceOptions: ["Dental exam", "Cleaning", "Fillings", "Cosmetic consultation", "Emergency visit"],
+    testimonialsTitle: "A few words from patients",
     testimonials: [
-      ["Very clean office and the team was genuinely kind from start to finish.", "Maria G."],
-      ["They explained my treatment clearly and made the whole visit feel easy.", "James P."],
-      ["Finally a dental office that feels modern, calm, and professional.", "Elena R."],
+      ["The office feels polished, calm, and genuinely professional.", "Maria G."],
+      ["Everything was explained clearly and the experience felt effortless.", "James P."],
+      ["One of the few practices that feels both modern and truly welcoming.", "Elena R."],
     ],
     contactTitle: "Visit Solvision Dentist",
     contactText:
@@ -82,7 +75,6 @@ const copy = {
       ["Saturday", "By appointment"],
       ["Sunday", "Closed"],
     ],
-    footerNote: "Modern family dentistry in North Port, Florida.",
   },
   es: {
     navServices: "Servicios",
@@ -90,63 +82,56 @@ const copy = {
     navDoctor: "Doctor",
     navTestimonials: "Testimonios",
     navContact: "Contacto",
-    badge: "Aceptando nuevos pacientes",
-    heroTitle: "Una experiencia dental más limpia, tranquila y familiar.",
+    badge: "Atención dental familiar con sensación privada",
+    heroTitle: "Odontología refinada con una experiencia tranquila y moderna.",
     heroText:
-      "Solvision Dentist ofrece odontología general moderna en North Port, Florida, con un enfoque amable y detallista diseñado para la comodidad, la claridad y la salud oral a largo plazo.",
+      "Solvision Dentist ofrece odontología general de alto nivel en North Port, Florida, con enfoque en precisión, comodidad y una experiencia del paciente bien organizada.",
     primaryCta: "Llamar ahora",
-    secondaryCta: "Ver servicios",
+    secondaryCta: "Solicitar visita",
     stickyCall: "Llamar ahora",
     stat1: "Odontología general",
-    stat2: "Aceptamos seguros principales",
-    stat3: "Ubicación conveniente en North Port",
-    servicesTitle: "Odontología general completa",
+    stat2: "Seguros principales",
+    stat3: "North Port, Florida",
+    servicesTitle: "Atención integral, presentada con elegancia.",
     servicesText:
-      "Atención preventiva, restauradora y cosmética en una sola clínica acogedora.",
+      "Servicios preventivos, restauradores y cosméticos con comunicación clara y atención meticulosa al detalle.",
     services: [
-      ["Exámenes Dentales", "Chequeos de rutina enfocados en prevención y tratamiento temprano."],
-      ["Limpiezas Profesionales", "Visitas de higiene completas para mantener dientes y encías saludables."],
-      ["Empastes del Color del Diente", "Restauraciones naturales para caries y daños menores."],
-      ["Coronas y Puentes", "Soluciones duraderas para recuperar fuerza, comodidad y función."],
-      ["Endodoncia", "Tratamiento cómodo para salvar dientes infectados o con dolor."],
-      ["Extracciones", "Extracción segura cuando un diente no puede restaurarse de forma predecible."],
-      ["Implantes Dentales", "Reemplazo dental moderno para una sonrisa estable y segura."],
-      ["Blanqueamiento Dental", "Mejora cosmética para refrescar e iluminar su sonrisa."],
+      ["Exámenes Dentales", "Evaluaciones de rutina para detectar problemas temprano y proteger la salud oral a largo plazo."],
+      ["Limpiezas Profesionales", "Atención de higiene completa para una sonrisa más fresca y saludable."],
+      ["Empastes del Color del Diente", "Restauraciones discretas que mantienen una apariencia natural."],
+      ["Coronas y Puentes", "Soluciones duraderas para recuperar comodidad y función."],
+      ["Endodoncia", "Atención enfocada en la comodidad para aliviar infección y conservar el diente."],
+      ["Extracciones", "Cuidado quirúrgico pensado cuando extraer es la mejor opción a largo plazo."],
+      ["Implantes Dentales", "Reemplazo dental moderno con estabilidad, confianza y estética."],
+      ["Blanqueamiento Dental", "Mejora cosmética para una sonrisa más limpia y luminosa."],
     ],
-    insuranceTitle: "Seguros sin complicaciones",
+    insuranceTitle: "Seguros manejados con claridad",
     insuranceText:
-      "Trabajamos con todas las principales compañías de seguros y podemos ayudarle a verificar sus beneficios antes de su visita para que sepa qué esperar.",
-    insuranceCallout:
-      "¿Preguntas sobre cobertura? Nuestro equipo puede ayudarle antes de su cita.",
-    doctorKicker: "Conozca a su doctor",
-    doctorTitle: "Atención guiada por formación clínica y visión de liderazgo.",
+      "Trabajamos con todas las principales compañías de seguros y ayudamos a entender beneficios antes del tratamiento para que todo se sienta simple, no estresante.",
+    insuranceCallout: "Atención elegante. Guía transparente. Sin confusión innecesaria.",
+    doctorKicker: "Sobre el doctor",
+    doctorTitle: "Excelencia clínica respaldada por disciplina de gestión.",
     doctorText:
-      "El Dr. Daniel Ocaña estudió en Penn Dental Medicine y luego completó un MBA en la University of Chicago, combinando una atención dental centrada en el paciente con una dirección moderna y bien pensada de la práctica.",
+      "El Dr. Daniel Ocaña estudió en Penn Dental Medicine y luego obtuvo un MBA en la University of Chicago, combinando formación clínica de alto nivel con liderazgo moderno de práctica.",
     doctorText2:
-      "Esa combinación ayuda a ofrecer una experiencia basada en confianza, comunicación clara, sistemas eficientes y altos estándares desde la primera llamada hasta cada seguimiento.",
+      "Esa combinación ayuda a crear una experiencia centrada en confianza, eficiencia, comunicación y atención constante al detalle desde la primera llamada hasta cada seguimiento.",
     doctorBadge1: "Penn Dental Medicine",
     doctorBadge2: "MBA University of Chicago",
     appointmentKicker: "Citas",
-    appointmentTitle: "Solicite su visita",
+    appointmentTitle: "Solicite una visita dental más cómoda.",
     appointmentText:
-      "Llámenos directamente o envíe una solicitud rápida para que nuestro equipo le ayude a encontrar el mejor horario.",
+      "Llame ahora para agendar de inmediato o envíe una solicitud rápida y nuestro equipo le ayudará a encontrar el horario adecuado.",
     formName: "Nombre completo",
     formPhone: "Número de teléfono",
     formService: "Seleccione servicio",
     formMessage: "¿Cómo podemos ayudarle?",
     formButton: "Solicitar cita",
-    serviceOptions: [
-      "Examen dental",
-      "Limpieza",
-      "Empastes",
-      "Consulta cosmética",
-      "Visita de emergencia",
-    ],
-    testimonialsTitle: "Lo que dicen los pacientes",
+    serviceOptions: ["Examen dental", "Limpieza", "Empastes", "Consulta cosmética", "Visita de emergencia"],
+    testimonialsTitle: "Algunas palabras de pacientes",
     testimonials: [
-      ["La oficina está muy limpia y el equipo fue realmente amable de principio a fin.", "María G."],
-      ["Explicaron mi tratamiento con claridad y toda la visita se sintió muy fácil.", "James P."],
-      ["Por fin una oficina dental que se siente moderna, tranquila y profesional.", "Elena R."],
+      ["La oficina se siente elegante, tranquila y realmente profesional.", "María G."],
+      ["Todo fue explicado con claridad y la experiencia se sintió muy fluida.", "James P."],
+      ["De las pocas prácticas que se sienten modernas y verdaderamente acogedoras.", "Elena R."],
     ],
     contactTitle: "Visite Solvision Dentist",
     contactText:
@@ -163,7 +148,6 @@ const copy = {
       ["Sábado", "Con cita"],
       ["Domingo", "Cerrado"],
     ],
-    footerNote: "Odontología familiar moderna en North Port, Florida.",
   },
 };
 
@@ -171,8 +155,7 @@ export default function Home() {
   const [lang, setLang] = useState("en");
 
   useEffect(() => {
-    const browserLanguage =
-      typeof navigator !== "undefined" ? navigator.language || "en" : "en";
+    const browserLanguage = typeof navigator !== "undefined" ? navigator.language || "en" : "en";
     setLang(browserLanguage.toLowerCase().startsWith("es") ? "es" : "en");
   }, []);
 
@@ -193,47 +176,47 @@ export default function Home() {
         </div>
       </header>
 
-      <section id="top" className="hero hero-premium">
-        <div className="container hero-grid">
-          <div>
+      <section id="top" className="hero luxury-hero">
+        <div className="container hero-grid luxury-grid">
+          <div className="hero-copy-wrap">
             <div className="eyebrow">{t.badge}</div>
-            <h1 className="hero-title">{t.heroTitle}</h1>
-            <p className="hero-copy">{t.heroText}</p>
+            <h1 className="hero-title luxury-title">{t.heroTitle}</h1>
+            <p className="hero-copy luxury-copy">{t.heroText}</p>
             <div className="hero-actions">
               <a href="tel:+19415550148" className="btn btn-primary">{t.primaryCta}</a>
-              <a href="#services" className="btn btn-secondary">{t.secondaryCta}</a>
+              <a href="#appointment" className="btn btn-secondary">{t.secondaryCta}</a>
             </div>
-            <div className="hero-stats">
+            <div className="hero-stats luxury-stats">
               <div className="stat-pill">{t.stat1}</div>
               <div className="stat-pill">{t.stat2}</div>
               <div className="stat-pill">{t.stat3}</div>
             </div>
           </div>
-          <div className="hero-panel">
-            <div className="hero-card hero-card-main">
-              <span className="hero-card-label">North Port, Florida</span>
-              <h2>Solvision</h2>
-              <p>{t.footerNote}</p>
+          <div className="showcase-panel">
+            <div className="showcase-card showcase-main">
+              <span className="showcase-label">Solvision Dentist</span>
+              <h2>North Port</h2>
+              <p>{t.contactText}</p>
             </div>
-            <div className="hero-card hero-card-small">
-              <strong>941-555-0148</strong>
-              <span>{t.primaryCta}</span>
+            <div className="showcase-card showcase-accent">
+              <span>{t.doctorBadge1}</span>
+              <strong>{t.doctorBadge2}</strong>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="services" className="section premium-section">
+      <section id="services" className="section luxury-section">
         <div className="container">
-          <div className="section-heading">
+          <div className="section-heading centered-heading">
             <span className="section-kicker">Solvision Dentist</span>
             <h2>{t.servicesTitle}</h2>
             <p>{t.servicesText}</p>
           </div>
-          <div className="services-grid">
+          <div className="services-grid luxury-services-grid">
             {t.services.map(([title, description]) => (
-              <article className="service-card" key={title}>
-                <div className="service-icon">✦</div>
+              <article className="service-card luxury-card" key={title}>
+                <div className="service-number">•</div>
                 <h3>{title}</h3>
                 <p>{description}</p>
               </article>
@@ -242,27 +225,29 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="insurance" className="section insurance-section">
-        <div className="container insurance-wrap">
+      <section id="insurance" className="section statement-section">
+        <div className="container statement-grid">
           <div>
-            <span className="section-kicker">Insurance</span>
+            <span className="section-kicker gold-kicker">Insurance</span>
             <h2>{t.insuranceTitle}</h2>
             <p>{t.insuranceText}</p>
           </div>
-          <div className="insurance-card">{t.insuranceCallout}</div>
+          <div className="statement-card">{t.insuranceCallout}</div>
         </div>
       </section>
 
-      <section id="doctor" className="section doctor-section">
-        <div className="container doctor-grid">
-          <div className="doctor-photo-card">
-            <div className="doctor-photo-glow" />
-            <div className="doctor-photo">
-              <div className="doctor-head" />
-              <div className="doctor-body" />
+      <section id="doctor" className="section luxury-section doctor-luxury-section">
+        <div className="container doctor-grid luxury-doctor-grid">
+          <div className="portrait-shell">
+            <div className="portrait-frame">
+              <div className="portrait-abstract">
+                <div className="portrait-orb" />
+                <div className="portrait-line" />
+                <div className="portrait-line portrait-line-two" />
+              </div>
             </div>
           </div>
-          <div className="doctor-copy">
+          <div className="doctor-copy luxury-doctor-copy">
             <span className="section-kicker">{t.doctorKicker}</span>
             <h2>{t.doctorTitle}</h2>
             <p>{t.doctorText}</p>
@@ -275,15 +260,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section appointment-section">
-        <div className="container appointment-grid">
-          <div className="appointment-copy">
+      <section id="appointment" className="section appointment-section luxury-section">
+        <div className="container appointment-grid luxury-appointment-grid">
+          <div className="appointment-copy luxury-appointment-copy">
             <span className="section-kicker">{t.appointmentKicker}</span>
             <h2>{t.appointmentTitle}</h2>
             <p>{t.appointmentText}</p>
             <a href="tel:+19415550148" className="btn btn-primary">{t.primaryCta}</a>
           </div>
-          <form className="appointment-card">
+          <form className="appointment-card luxury-form-card">
             <label>
               <span>{t.formName}</span>
               <input type="text" placeholder={t.formName} />
@@ -310,15 +295,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="testimonials" className="section premium-section">
+      <section id="testimonials" className="section luxury-section testimonials-section">
         <div className="container">
-          <div className="section-heading narrow">
+          <div className="section-heading centered-heading narrow">
             <span className="section-kicker">Testimonials</span>
             <h2>{t.testimonialsTitle}</h2>
           </div>
-          <div className="testimonials-grid">
+          <div className="testimonials-grid luxury-testimonials-grid">
             {t.testimonials.map(([quote, name]) => (
-              <blockquote className="testimonial-card" key={name + quote}>
+              <blockquote className="testimonial-card luxury-testimonial-card" key={name + quote}>
                 <p>“{quote}”</p>
                 <footer>{name}</footer>
               </blockquote>
@@ -327,7 +312,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer id="contact" className="premium-footer">
+      <footer id="contact" className="premium-footer luxury-footer">
         <div className="container footer-grid">
           <div>
             <h2>{t.contactTitle}</h2>
