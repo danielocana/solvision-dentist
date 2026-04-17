@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 const copy = {
   en: {
@@ -9,6 +9,7 @@ const copy = {
     navDoctor: "Doctor",
     navTestimonials: "Testimonials",
     navContact: "Contact",
+    navCoded: "Coded",
     badge: "Private-feel family dental care",
     heroTitle: "Refined dentistry with a calm, modern experience.",
     heroText:
@@ -82,6 +83,7 @@ const copy = {
     navDoctor: "Doctor",
     navTestimonials: "Testimonios",
     navContact: "Contacto",
+    navCoded: "Coded",
     badge: "Atención dental familiar con sensación privada",
     heroTitle: "Odontología refinada con una experiencia tranquila y moderna.",
     heroText:
@@ -152,12 +154,10 @@ const copy = {
 };
 
 export default function Home() {
-  const [lang, setLang] = useState("en");
-
-  useEffect(() => {
+  const [lang] = useState(() => {
     const browserLanguage = typeof navigator !== "undefined" ? navigator.language || "en" : "en";
-    setLang(browserLanguage.toLowerCase().startsWith("es") ? "es" : "en");
-  }, []);
+    return browserLanguage.toLowerCase().startsWith("es") ? "es" : "en";
+  });
 
   const t = useMemo(() => copy[lang] || copy.en, [lang]);
 
@@ -172,6 +172,7 @@ export default function Home() {
             <a href="#doctor">{t.navDoctor}</a>
             <a href="#testimonials">{t.navTestimonials}</a>
             <a href="#contact">{t.navContact}</a>
+            <a href="/coded">{t.navCoded}</a>
           </nav>
         </div>
       </header>
