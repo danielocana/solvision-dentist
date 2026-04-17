@@ -1,55 +1,244 @@
-export default function Home(){
-return(
-<main>
-<section className="hero">
-<div className="container">
-<h1 style={{fontSize:"2.5rem",marginBottom:10}}>Solvision Dentist</h1>
-<p style={{marginBottom:20}}>Modern Dental Care in North Port, Florida<br/>Atención dental moderna en North Port, Florida</p>
-<div style={{display:"flex",gap:10,flexWrap:"wrap"}}>
-<a href="#contact" className="btn btn-primary">Call Now</a>
-<a href="#services" className="btn btn-secondary">Services</a>
-</div>
-</div>
-</section>
+"use client";
 
-<section id="services" className="section">
-<div className="container">
-<h2>Services / Servicios</h2>
-<div className="grid grid-3" style={{marginTop:20}}>
-{["Cleanings / Limpiezas","Fillings / Empastes","Root Canals / Endodoncia","Extractions / Extracciones","Implants / Implantes","Whitening / Blanqueamiento"].map(s=>(
-<div className="card" key={s}>{s}</div>
-))}
-</div>
-</div>
-</section>
+import { useEffect, useMemo, useState } from "react";
 
-<section className="section">
-<div className="container">
-<h2>Insurance</h2>
-<p>We work with all major insurance companies<br/>Trabajamos con todas las aseguradoras principales</p>
-</div>
-</section>
+const copy = {
+  en: {
+    navServices: "Services",
+    navInsurance: "Insurance",
+    navTestimonials: "Testimonials",
+    navContact: "Contact",
+    badge: "Now welcoming new patients",
+    heroTitle: "A cleaner, calmer dental experience for the whole family.",
+    heroText:
+      "Solvision Dentist provides modern general dentistry in North Port, Florida with a friendly, detail-focused approach designed around comfort, clarity, and long-term oral health.",
+    primaryCta: "Call now",
+    secondaryCta: "Explore services",
+    stat1: "General dentistry",
+    stat2: "All major insurance accepted",
+    stat3: "Convenient North Port location",
+    servicesTitle: "Complete general dentistry",
+    servicesText:
+      "Preventive, restorative, and cosmetic care in one welcoming office.",
+    services: [
+      ["Dental Exams", "Routine checkups focused on prevention and early treatment."],
+      ["Professional Cleanings", "Thorough hygiene visits that help keep teeth and gums healthy."],
+      ["Tooth-Colored Fillings", "Natural-looking restorations for cavities and minor damage."],
+      ["Crowns & Bridges", "Durable solutions to restore strength, comfort, and function."],
+      ["Root Canals", "Comfort-focused treatment to save infected or painful teeth."],
+      ["Extractions", "Safe removal when a tooth cannot be predictably restored."],
+      ["Dental Implants", "Modern tooth replacement for a stable, confident smile."],
+      ["Teeth Whitening", "Cosmetic brightening designed to refresh your smile."],
+    ],
+    insuranceTitle: "Insurance made simple",
+    insuranceText:
+      "We work with all major insurance companies and can help verify your benefits before your visit so you know what to expect.",
+    insuranceCallout: "Questions about coverage? Our team can help before your appointment.",
+    testimonialsTitle: "What patients say",
+    testimonials: [
+      ["Very clean office and the team was genuinely kind from start to finish.", "Maria G."],
+      ["They explained my treatment clearly and made the whole visit feel easy.", "James P."],
+      ["Finally a dental office that feels modern, calm, and professional.", "Elena R."],
+    ],
+    contactTitle: "Visit Solvision Dentist",
+    contactText:
+      "General dental care for adults, teens, and children in North Port, Florida.",
+    phoneLabel: "Phone",
+    locationLabel: "Location",
+    hoursLabel: "Hours",
+    hours: [
+      ["Monday", "8:00 AM - 5:00 PM"],
+      ["Tuesday", "8:00 AM - 5:00 PM"],
+      ["Wednesday", "8:00 AM - 5:00 PM"],
+      ["Thursday", "8:00 AM - 5:00 PM"],
+      ["Friday", "8:00 AM - 3:00 PM"],
+      ["Saturday", "By appointment"],
+      ["Sunday", "Closed"],
+    ],
+    footerNote: "Modern family dentistry in North Port, Florida.",
+  },
+  es: {
+    navServices: "Servicios",
+    navInsurance: "Seguros",
+    navTestimonials: "Testimonios",
+    navContact: "Contacto",
+    badge: "Aceptando nuevos pacientes",
+    heroTitle: "Una experiencia dental más limpia, tranquila y familiar.",
+    heroText:
+      "Solvision Dentist ofrece odontología general moderna en North Port, Florida, con un enfoque amable y detallista diseñado para la comodidad, la claridad y la salud oral a largo plazo.",
+    primaryCta: "Llamar ahora",
+    secondaryCta: "Ver servicios",
+    stat1: "Odontología general",
+    stat2: "Aceptamos seguros principales",
+    stat3: "Ubicación conveniente en North Port",
+    servicesTitle: "Odontología general completa",
+    servicesText:
+      "Atención preventiva, restauradora y cosmética en una sola clínica acogedora.",
+    services: [
+      ["Exámenes Dentales", "Chequeos de rutina enfocados en prevención y tratamiento temprano."],
+      ["Limpiezas Profesionales", "Visitas de higiene completas para mantener dientes y encías saludables."],
+      ["Empastes del Color del Diente", "Restauraciones naturales para caries y daños menores."],
+      ["Coronas y Puentes", "Soluciones duraderas para recuperar fuerza, comodidad y función."],
+      ["Endodoncia", "Tratamiento cómodo para salvar dientes infectados o con dolor."],
+      ["Extracciones", "Extracción segura cuando un diente no puede restaurarse de forma predecible."],
+      ["Implantes Dentales", "Reemplazo dental moderno para una sonrisa estable y segura."],
+      ["Blanqueamiento Dental", "Mejora cosmética para refrescar e iluminar su sonrisa."],
+    ],
+    insuranceTitle: "Seguros sin complicaciones",
+    insuranceText:
+      "Trabajamos con todas las principales compañías de seguros y podemos ayudarle a verificar sus beneficios antes de su visita para que sepa qué esperar.",
+    insuranceCallout: "¿Preguntas sobre cobertura? Nuestro equipo puede ayudarle antes de su cita.",
+    testimonialsTitle: "Lo que dicen los pacientes",
+    testimonials: [
+      ["La oficina está muy limpia y el equipo fue realmente amable de principio a fin.", "María G."],
+      ["Explicaron mi tratamiento con claridad y toda la visita se sintió muy fácil.", "James P."],
+      ["Por fin una oficina dental que se siente moderna, tranquila y profesional.", "Elena R."],
+    ],
+    contactTitle: "Visite Solvision Dentist",
+    contactText:
+      "Atención dental general para adultos, adolescentes y niños en North Port, Florida.",
+    phoneLabel: "Teléfono",
+    locationLabel: "Ubicación",
+    hoursLabel: "Horario",
+    hours: [
+      ["Lunes", "8:00 AM - 5:00 PM"],
+      ["Martes", "8:00 AM - 5:00 PM"],
+      ["Miércoles", "8:00 AM - 5:00 PM"],
+      ["Jueves", "8:00 AM - 5:00 PM"],
+      ["Viernes", "8:00 AM - 3:00 PM"],
+      ["Sábado", "Con cita"],
+      ["Domingo", "Cerrado"],
+    ],
+    footerNote: "Odontología familiar moderna en North Port, Florida.",
+  },
+};
 
-<section className="section">
-<div className="container">
-<h2>Testimonials</h2>
-<div className="grid grid-3" style={{marginTop:20}}>
-<div className="card">"Great service"</div>
-<div className="card">"Excelente atención"</div>
-<div className="card">"Very professional"</div>
-</div>
-</div>
-</section>
+export default function Home() {
+  const [lang, setLang] = useState("en");
 
-<footer id="contact" className="footer">
-<div className="container">
-<h3>Contact</h3>
-<p>(941) 555-0148</p>
-<p>North Port, Florida</p>
-<p>Mon-Fri 8am–5pm</p>
-</div>
-</footer>
+  useEffect(() => {
+    const browserLanguage = typeof navigator !== "undefined" ? navigator.language || "en" : "en";
+    setLang(browserLanguage.toLowerCase().startsWith("es") ? "es" : "en");
+  }, []);
 
-</main>
-)
+  const t = useMemo(() => copy[lang] || copy.en, [lang]);
+
+  return (
+    <main className="site-shell">
+      <header className="topbar">
+        <div className="container topbar-inner">
+          <a href="#top" className="brand-mark">Solvision Dentist</a>
+          <nav className="nav-links">
+            <a href="#services">{t.navServices}</a>
+            <a href="#insurance">{t.navInsurance}</a>
+            <a href="#testimonials">{t.navTestimonials}</a>
+            <a href="#contact">{t.navContact}</a>
+          </nav>
+        </div>
+      </header>
+
+      <section id="top" className="hero hero-premium">
+        <div className="container hero-grid">
+          <div>
+            <div className="eyebrow">{t.badge}</div>
+            <h1 className="hero-title">{t.heroTitle}</h1>
+            <p className="hero-copy">{t.heroText}</p>
+            <div className="hero-actions">
+              <a href="tel:+19415550148" className="btn btn-primary">{t.primaryCta}</a>
+              <a href="#services" className="btn btn-secondary">{t.secondaryCta}</a>
+            </div>
+            <div className="hero-stats">
+              <div className="stat-pill">{t.stat1}</div>
+              <div className="stat-pill">{t.stat2}</div>
+              <div className="stat-pill">{t.stat3}</div>
+            </div>
+          </div>
+          <div className="hero-panel">
+            <div className="hero-card hero-card-main">
+              <span className="hero-card-label">North Port, Florida</span>
+              <h2>Solvision</h2>
+              <p>{t.footerNote}</p>
+            </div>
+            <div className="hero-card hero-card-small">
+              <strong>941-555-0148</strong>
+              <span>{t.primaryCta}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" className="section premium-section">
+        <div className="container">
+          <div className="section-heading">
+            <span className="section-kicker">Solvision Dentist</span>
+            <h2>{t.servicesTitle}</h2>
+            <p>{t.servicesText}</p>
+          </div>
+          <div className="services-grid">
+            {t.services.map(([title, description]) => (
+              <article className="service-card" key={title}>
+                <div className="service-icon">✦</div>
+                <h3>{title}</h3>
+                <p>{description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="insurance" className="section insurance-section">
+        <div className="container insurance-wrap">
+          <div>
+            <span className="section-kicker">Insurance</span>
+            <h2>{t.insuranceTitle}</h2>
+            <p>{t.insuranceText}</p>
+          </div>
+          <div className="insurance-card">{t.insuranceCallout}</div>
+        </div>
+      </section>
+
+      <section id="testimonials" className="section premium-section">
+        <div className="container">
+          <div className="section-heading narrow">
+            <span className="section-kicker">Testimonials</span>
+            <h2>{t.testimonialsTitle}</h2>
+          </div>
+          <div className="testimonials-grid">
+            {t.testimonials.map(([quote, name]) => (
+              <blockquote className="testimonial-card" key={name + quote}>
+                <p>“{quote}”</p>
+                <footer>{name}</footer>
+              </blockquote>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <footer id="contact" className="premium-footer">
+        <div className="container footer-grid">
+          <div>
+            <h2>{t.contactTitle}</h2>
+            <p>{t.contactText}</p>
+          </div>
+          <div>
+            <h3>{t.phoneLabel}</h3>
+            <p>(941) 555-0148</p>
+            <h3>{t.locationLabel}</h3>
+            <p>1450 Tamiami Trail, North Port, FL 34287</p>
+          </div>
+          <div>
+            <h3>{t.hoursLabel}</h3>
+            <ul className="hours-list">
+              {t.hours.map(([day, time]) => (
+                <li key={day}>
+                  <span>{day}</span>
+                  <strong>{time}</strong>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </main>
+  );
 }
